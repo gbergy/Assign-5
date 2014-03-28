@@ -1,0 +1,15 @@
+<h1>Edit Profile</h1>
+<nav>
+  <li><%=link_to "Home", root_path%></li>
+  <li><%=link_to "Sign Up", new_user_path%></li>
+  <li>Log In</li>
+  <li><%=link_to "Search", search_path%></li>
+</nav>
+<br>
+
+<%=form_for [@post.user, @post], html: {method: :put} do |f| %>
+  <%=f.label :title, "Title" %>
+  <%=f.text_field :title %>
+  <br>
+  <%=f.submit "Update Post"%>
+ <%end%>

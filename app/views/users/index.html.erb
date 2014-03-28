@@ -1,0 +1,14 @@
+<h1>Here is a list of users</h1>
+<nav>
+	<li><%=link_to "Home", root_path%></li>
+	<li><%=link_to "Sign Up", new_user_path%></li>
+	<li>Log In</li>
+	<li><%=link_to "Search", search_path%></li>
+</nav>
+<br>
+
+<div>
+<% @users.each do |user| %>
+	<%=render "user", user: user %>
+<% end %>
+</div>
